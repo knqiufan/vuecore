@@ -6,7 +6,7 @@
       </a>
       <el-menu
         :default-active="activeIndex2"
-        class="el-menu-demo"
+        class="el-menu"
         mode="horizontal"
         @select="handleSelect"
         background-color="#545c64"
@@ -27,18 +27,12 @@
             <el-menu-item index="2-4-3">选项3</el-menu-item>
           </el-submenu>
         </el-submenu>
-        <div class="login">
-          
-          <ul class="layui-nav fly-nav-user">
-            <li class="layui-nav-item">
-              <v-icon class="fa-icon" name="user-circle" scale="1.7" title="登录" /> 
-              <a href="user/login.html">登入</a>
-            </li>
-            <li class="layui-nav-item">
-              <a href="user/reg.html">注册</a>
-            </li>
-          </ul>
-        </div>
+        <el-button class="login" type="info">
+          登录
+        </el-button>
+        <el-button class="region" type="info">
+          注册
+        </el-button>
       </el-menu>
     </div>
   </div>
@@ -55,7 +49,7 @@ export default {
     },
     methods: {
       handleSelect(key, keyPath) {
-        console.log(key, keyPath);
+        console.log(key, keyPath)
       }
     }
 }
@@ -81,6 +75,7 @@ export default {
 .el-menu{position:relative;margin-left:25%}
 /* .el-menu .login{color:#fff;display: inline-block;line-height: 60px;font-size: 15px} */
 .fly-logo{position: absolute; left: 15px;top:10px}
+.layui-container .el-menu .login,.layui-container .el-menu .region{margin-top:10px;}
 @media screen and (min-width:768px){.el-menu,.layui-container{width:750px}}
 @media screen and (min-width:992px){.el-menu,.layui-container{width:970px}}
 @media screen and (min-width:1200px){.el-menu,.layui-container{width:1170px}}
